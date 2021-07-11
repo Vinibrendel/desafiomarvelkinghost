@@ -8,9 +8,15 @@ $.ajax({
         var nome_p1 = dados_p1.data.results[0]["name"];
         var biografia_p1 = dados_p1.data.results[0]["description"];
         var imagem_p1 = dados_p1.data.results[0].thumbnail["path"]+"."+dados_p1.data.results[0].thumbnail["extension"];
+        var historia_1_p1 = dados_p1.data.results[0].comics.items[7].name;
+        var historia_2_p1 = dados_p1.data.results[0].comics.items[8].name;
         $("#nome_p1").html(nome_p1);
         $("#biografia_p1").html(biografia_p1);
+        $("#historia_1_p1").html(historia_1_p1);
+        $("#historia_2_p1").html(historia_2_p1);
         $("#imagem_p1").attr("src", imagem_p1);
+
+        
     }
 })
 
@@ -25,11 +31,15 @@ $.ajax({
         var nome_p2 = dados_p2.data.results[0]["name"];
         var biografia_p2 = dados_p2.data.results[0]["description"];
         var imagem_p2 = dados_p2.data.results[0].thumbnail["path"]+"."+dados_p2.data.results[0].thumbnail["extension"];
+        var historia_1_p2 = dados_p2.data.results[0].comics.items[14].name;
+        var historia_2_p2 = dados_p2.data.results[0].comics.items[15].name;
         $("#nome_p2").html(nome_p2);
         $("#biografia_p2").html(biografia_p2);
         $("#imagem_p2").attr("src", imagem_p2);
+        $("#historia_1_p2").html(historia_1_p2);
+        $("#historia_2_p2").html(historia_2_p2);
 
-        console.log(dados_p2);
+        console.log(dados_p2.data.results[0].comics.items);
 
        }
 })
